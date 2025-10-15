@@ -6,4 +6,6 @@ http
     res.writeHead(200, { "Content-Type": "text/html" });
     res.end("Hello World!");
   })
-  .listen(port);
+  .listen(port, () => {
+    console.log(`Server running at http://localhost:${port}/`);
+  });
